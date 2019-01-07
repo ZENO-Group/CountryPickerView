@@ -38,6 +38,16 @@ class CountryPickerViewController: UITableViewController {
         prepareNavItem()
         prepareSearchBar()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        navigationController?.isNavigationBarHidden = false
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        navigationController?.isNavigationBarHidden = true
+    }
    
 }
 
